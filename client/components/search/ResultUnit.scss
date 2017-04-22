@@ -1,0 +1,51 @@
+.result-unit {
+  cursor: pointer;
+  font-family: $sans-serif;
+  @include between(font-size, 18px, 14px, $mq-1024, $mq-324);
+  color: darken($mainColor, 10%);
+  padding: 5px 10px;
+  display: flex;
+  align-items: baseline;
+
+  &:hover {
+    background-color: lightgray;
+  }
+
+  input[type=checkbox] {
+    display: none;
+  }
+
+  .checkbox-view {
+    color: $mainColor;
+    //font-size: 10px;
+    position: relative;
+    margin-right: 5px;
+    border: 1px solid $mainColor;
+    width: 13px;
+    height: 13px;
+    border-radius: 2px;
+
+    .fa {
+      font-size: 15px;
+      vertical-align: baseline;
+      position: absolute;
+      top: -2px;
+      left: -1px;
+    }
+  }
+
+  &.is-active {
+    background: $mainColor;
+    color: #fff;
+    border-color: $mainColor;
+    border-bottom-color: #fff;
+    
+    .fa {
+      color: #fff;
+    }
+  }
+
+  .dash {
+    margin: 0 5px;
+  }
+}

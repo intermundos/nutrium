@@ -1,0 +1,45 @@
+.header {
+
+  border-bottom: 1px solid $mainColor;
+  @include between(padding, 10px, 5px, $mq-1024, $mq-324);
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .title {
+    color: darken($mainColor, 10%);
+    margin-bottom: 0;
+    margin-right: 20px;
+    font-size: 340%;
+  }
+
+  .navigation {
+    display: flex;
+  }
+
+  .nav--item {
+    display: block;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid $mainColor;
+    color: $mainColor;
+    margin-right: 3px;
+    transition: all .3s linear;
+    text-transform: uppercase;
+    font-family: $sans-serif;
+
+
+    &:hover {
+      background-color: $mainColor;
+      color: #fff;
+    }
+
+    &.active {
+      background-color: $mainColor;
+      color: #fff;
+    }
+  }
+}

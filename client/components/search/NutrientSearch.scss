@@ -1,0 +1,22 @@
+.nutrient-search {
+  //display: flex;
+  max-width: $widgetWidth;
+
+  .input {
+    border-color: $mainColor;
+    border-radius: 0;
+    width: 100%;
+  }
+
+
+  .search-btn {
+    background-color: $mainColor;
+    color: #fff;
+    border-color: $mainColor;
+    margin-left: 1px;
+
+    &:hover {
+      background-color: darken($mainColor, 5%);
+    }
+  }
+}
