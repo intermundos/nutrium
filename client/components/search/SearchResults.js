@@ -9,7 +9,9 @@ const SearchResults = props => {
     <div className="search-results">
       {
         results
-          .map((nutrient, index) => <ResultUnit nutrient={ nutrient } key={ nutrient.name } />)
+          .map((nutrient, index) =>
+            <ResultUnit nutrient={ nutrient } key={ nutrient.name } isNPKvisible={ false }/>
+          )
       }
     </div>
   )

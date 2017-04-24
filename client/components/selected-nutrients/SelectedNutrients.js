@@ -4,19 +4,27 @@ import ResultUnit from '../search/ResultUnit'
 
 const SelectedNutrients = (props) => {
 
-  return (
-    <div className={ `selected-nutrients column ${ props.columnSize }` }>
-      <div className="head">
-        Selected <span className="selected-count">{ props.nutrients.length }</span> nutrients
-      </div>
-      <hr/>
-      {
-        props.nutrients.map((nutrient, index) =>
-          <ResultUnit key={ nutrient.name } nutrient={ nutrient }/>
-        )
-      }
-    </div>
-  )
+  const { nutrients } = props
+
+  return nutrients.length > 0 ?
+      <div className={ `field selected-nutrients` }>
+        <div className="head">
+          <span className="selected-count padSides-5">
+            { nutrients.length }
+          </span>
+          {
+            nutrients.length > 1 ? 'nutrients ' : 'nutrient '
+          }
+          selected
+        </div>
+        <div className="selected-nutrients-list ">
+          {
+            nutrients.map((nutrient, index) =>
+              <ResultUnit key={ nutrient.name } nutrient={ nutrient } isNPKvisible={ true }/>
+            )
+          }
+        </div>
+      </div> : null
 }
 
 export default SelectedNutrients

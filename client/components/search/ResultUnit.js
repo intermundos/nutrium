@@ -14,19 +14,32 @@ class ResultUnit extends Component {
     !nutrient.isSelected ? this.props.selectNutrient(nutrient) : this.props.removeNutrient(nutrient)
   }
 
+  showNKP = nutrientElements =>
+    <div className="NPK">
+      <span>NPK:</span>
+      <span>{ nutrientElements.N }</span>
+      <span>{ nutrientElements.P } </span>
+      <span>{ nutrientElements.K }</span>
+    </div>
+
   render() {
-    let { nutrient } = this.props
+    let { nutrient, isNPKvisible } = this.props
+    let nutrientElements = nutrient.elements
     let isSelected = nutrient.isSelected
     return (
       <div className={ `result-unit panel-block ${ isSelected ? 'is-active': '' }`}
            onClick={ () => this.toggleCheckboxChange(nutrient)}
       >
-        <div className="checkbox-view">
-          <i className={ `fa ${ isSelected ? 'fa-check-square' : ''}` } aria-hidden="true" />
-        </div>
-        <div className="unit-company">{ nutrient.company }</div>
-        <span className="dash">-</span>
-        <div className="unit-name">{ nutrient.name }</div>
+          <div className="checkbox-view">
+            <i className={ `fa ${ isSelected ? 'fa-check-square' : ''}` } aria-hidden="true" />
+          </div>
+          <div className="unit-company">{ nutrient.company }</div>
+          <span className="dash">-</span>
+          <div className="unit-name">{ nutrient.name }</div>
+
+          {
+            isNPKvisible ?  this.showNKP(nutrientElements)  : null
+          }
       </div>
     )
   }

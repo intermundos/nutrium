@@ -5,7 +5,7 @@ import { BrowserRouter as Router }  from 'react-router-dom'
 import configureStore               from './app-logic/store/store'
 const store = configureStore()
 
-import Root from './containers/App'
+import Root from './containers/App/App'
 
 
 ReactDOM.render(

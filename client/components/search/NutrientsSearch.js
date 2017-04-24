@@ -10,8 +10,19 @@ class NutrientsSearch extends Component {
     searchInput: ''
   }
 
+  resetSearch = () => {
+    this.setState({ searchInput: '' })
+  }
+
   fetchData = () => { !this.props._isFetched ? this.props.fetchDataOnFocus() : null }
+
+  onSearchFocus = () => {
+    this.fetchData()
+    this.resetSearch()
+  }
+
   handleInputChange = event => this.setState({ searchInput: event.target.value })
+
   filterSearch = () => {
     let { searchInput } = this.state
     let { _nutrients } = this.props
@@ -25,13 +36,13 @@ class NutrientsSearch extends Component {
 
   render() {
     return (
-      <div className="field nutrient-search column is-4">
+      <div className={ `field nutrient-search` }>
         <p className="control has-icons-left">
           <input className="input"
                  type="search"
                  value={ this.state.searchInput }
                  onChange={ this.handleInputChange }
-                 onFocus={ this.fetchData }
+                 onFocus={ this.onSearchFocus }
                  placeholder="start typing..."
           />
           <span className="icon is-small is-left">

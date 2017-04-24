@@ -6,9 +6,10 @@
   padding: 5px 10px;
   display: flex;
   align-items: baseline;
+  position: relative;
 
   &:hover {
-    background-color: lightgray;
+    background-color: rgba(12, 155, 133, 0.09);
   }
 
   input[type=checkbox] {
@@ -17,9 +18,9 @@
 
   .checkbox-view {
     color: $mainColor;
-    //font-size: 10px;
+    background-color: #fff;
     position: relative;
-    margin-right: 5px;
+    margin-right: 10px;
     border: 1px solid $mainColor;
     width: 13px;
     height: 13px;
@@ -43,9 +44,29 @@
     .fa {
       color: #fff;
     }
+
+    &:hover {
+      background-color: lighten($mainColor, 5%);
+    }
+
+    .checkbox-view {
+      background-color: $mainColor;
+    }
   }
 
   .dash {
     margin: 0 5px;
+  }
+
+  .NPK {
+    width: 40%;
+    position: absolute;
+    right: 10px;
+    display: flex;
+    justify-content: space-around;
+
+    span {
+      display: block;
+    }
   }
 }

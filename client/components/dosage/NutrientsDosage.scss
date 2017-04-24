@@ -1,0 +1,29 @@
+.dosage-inputs {
+  max-width: 100px;
+
+  .input-wrap {
+    position: relative;
+  }
+
+  .input {
+    //margin-right: 1px;
+    margin-bottom: 1px;
+  }
+
+  .field {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 0;
+  }
+
+  select {
+    width: 48px;
+    padding: 0;
+    padding-left: 5px;
+  }
+
+  .select:after {
+    right: .3rem;
+  }
+}
