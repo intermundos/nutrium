@@ -16,6 +16,12 @@
     display: none;
   }
 
+  .fa-circle {
+    font-size: 7px;
+    vertical-align: middle;
+    margin: 0 10px;
+  }
+
   .checkbox-view {
     color: $mainColor;
     background-color: #fff;
@@ -59,11 +65,13 @@
   }
 
   .NPK {
-    width: 40%;
-    position: absolute;
-    right: 10px;
-    display: flex;
-    justify-content: space-around;
+    width: 45%;
+    right: 5px;
+    display: grid;
+    grid-template-columns: 50px repeat(3, 30px);
+    grid-gap: 0 2px;
+    justify-items: stretch;
+    justify-content: stretch;
 
     span {
       display: block;

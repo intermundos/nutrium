@@ -4,7 +4,7 @@ import ResultUnit from '../search/ResultUnit'
 
 const SelectedNutrients = (props) => {
 
-  const { nutrients } = props
+  const { nutrients, clearAllSelected } = props
 
   return nutrients.length > 0 ?
       <div className={ `field selected-nutrients` }>
@@ -12,10 +12,13 @@ const SelectedNutrients = (props) => {
           <span className="selected-count padSides-5">
             { nutrients.length }
           </span>
-          {
-            nutrients.length > 1 ? 'nutrients ' : 'nutrient '
-          }
+          {/*{*/}
+            {/*nutrients.length > 1 ? 'nutrients ' : 'nutrient '*/}
+          {/*}*/}
           selected
+          <div className="delete" onClick={ () => clearAllSelected() }>
+
+          </div>
         </div>
         <div className="selected-nutrients-list ">
           {

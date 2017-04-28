@@ -1,6 +1,7 @@
 .selected-nutrients {
-  max-width: $widgetWidth;
+  //max-width: $widgetWidth;
   width: 100%;
+  position: relative;
 
   //.head {
   //  font-family: $sans-serif;
@@ -27,5 +28,21 @@
     padding: 5px 10px;
     margin: 0 5px;
     font-weight: 600;
+  }
+
+  .delete {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #d14739;
+    opacity: 0.6;
+    width: 15px;
+    height: 15px;
+
+    &:hover {
+      opacity: 1;
+    }
+
   }
 }

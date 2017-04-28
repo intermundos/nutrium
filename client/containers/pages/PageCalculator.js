@@ -8,10 +8,12 @@ import NutrientsDosage from '../../components/dosage/NutrientsDosage'
 const PageCalculator = props =>
   <div className="page page-calculator">
     <div className="containerr">
-      <div className="search-select columns">
-        <NutrientsSearch columnSize="is-3" />
-        <SelectedNutrients columnSize="is-5" />
-        <NutrientsDosage />
+      <div className="grid-container">
+          <NutrientsSearch />
+          <div className="selected-block">
+            <SelectedNutrients />
+            <NutrientsDosage />
+          </div>
       </div>
     </div>
   </div>

@@ -37,9 +37,8 @@ class ResultUnit extends Component {
           <span className="dash">-</span>
           <div className="unit-name">{ nutrient.name }</div>
 
-          {
-            isNPKvisible ?  this.showNKP(nutrientElements)  : null
-          }
+          { isNPKvisible ?  <span><i className="fa fa-circle"/></span>  : null }
+          { isNPKvisible ?  this.showNKP(nutrientElements)  : null }
       </div>
     )
   }

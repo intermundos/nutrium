@@ -1,3 +1,35 @@
 .page-calculator {
   padding: 30px 30px 0 30px;
+
+  .containerr {
+    max-width: 90vw;
+    height: 100vh;
+    margin: 0 auto;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 250px 500px;
+    grid-template-rows: 1fr;
+    grid-gap: 10px 10px;
+    padding: 10px;
+    //justify-content: flex-start;
+    justify-items: center;
+    //background-color: green;
+
+    @include tillBreakpoint($mq-768) {
+      grid-template-columns: 90vw;
+      justify-content: center;
+    }
+  }
+
+  .selected-block {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 100px;
+    grid-gap: 0 10px;
+    justify-items: flex-start;
+    justify-content: center;
+
+  }
 }

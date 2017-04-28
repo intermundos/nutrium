@@ -1,5 +1,6 @@
 .dosage-inputs {
   max-width: 100px;
+  grid-auto-columns: min-content;
 
   .input-wrap {
     position: relative;
